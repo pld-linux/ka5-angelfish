@@ -34,12 +34,12 @@ BuildRequires:	kf5-kconfig-devel >= 5.95.0
 BuildRequires:	kf5-kcoreaddons-devel >= 5.95.0
 BuildRequires:	kf5-kdbusaddons-devel >= 5.95.0
 BuildRequires:	kf5-ki18n-devel >= 5.95.0
+BuildRequires:	kf5-kirigami-addons-devel >= 0.6
 BuildRequires:	kf5-kirigami2-devel >= 5.95.0
 BuildRequires:	kf5-knotifications-devel >= 5.95.0
 BuildRequires:	kf5-kwindowsystem-devel >= 5.95.0
 BuildRequires:	kf5-purpose-devel >= 5.95.0
 BuildRequires:	kf5-qqc2-desktop-style-devel >= 5.95.0
-BuildRequires:	kirigami-addons-devel >= 0.6
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
