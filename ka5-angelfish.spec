@@ -1,11 +1,13 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	tests		# test suite
+
 %define		kdeappsver	23.08.5
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		angelfish
 Summary:	A webbrowser for small mobile devices
+Summary(pl.UTF-8):	Przeglądarka WWW dla małych urządzeń przenośnych
 Name:		ka5-%{kaname}
 Version:	23.08.5
 Release:	1
@@ -13,7 +15,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	1f72928ad7b1b508c0cb1df34a6ab66c
-URL:		http://www.kde.org/
+URL:		https://kde.org/
 BuildRequires:	Qt5Core-devel >= 5.15.2
 BuildRequires:	Qt5Gui-devel >= 5.15.2
 BuildRequires:	Qt5Network-devel >= 5.15.9
@@ -50,10 +52,14 @@ ExcludeArch:	x32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a webbrowser designed to
-
+This is a webbrowser designed to:
 - be used on small mobile devices,
 - integrate well in Plasma workspaces
+
+%description -l pl.UTF-8
+Ta aplikacja to przeglądarka WWW zaprojektowana z myślą o:
+- używaniu na małych urządzeniach przenośnych
+- dobrej integracji z pulpitami Plazmy
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -65,6 +71,7 @@ This is a webbrowser designed to
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+
 %ninja_build -C build
 
 %if %{with tests}
@@ -74,6 +81,7 @@ ctest --test-dir build
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %ninja_install -C build
 
 %find_lang %{kaname} --all-name --with-kde
