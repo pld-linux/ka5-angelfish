@@ -15,7 +15,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	1f72928ad7b1b508c0cb1df34a6ab66c
-URL:		https://kde.org/
+URL:		https://apps.kde.org/angelfish/
 BuildRequires:	Qt5Core-devel >= 5.15.2
 BuildRequires:	Qt5Gui-devel >= 5.15.2
 BuildRequires:	Qt5Network-devel >= 5.15.9
