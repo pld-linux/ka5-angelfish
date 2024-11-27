@@ -10,7 +10,7 @@ Summary:	A webbrowser for small mobile devices
 Summary(pl.UTF-8):	Przeglądarka WWW dla małych urządzeń przenośnych
 Name:		ka5-%{kaname}
 Version:	23.08.5
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
